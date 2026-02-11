@@ -1,0 +1,177 @@
+/* Custom Fonts and Neumorphic Styles */
+
+/* Neumorphism */
+.shadow-neumorphic {
+    box-shadow:
+        8px 8px 16px #d1c9c2,
+        -8px -8px 16px #ffffff;
+}
+
+.neumorphic-card {
+    background: #F9F3EE;
+    border-radius: 1rem;
+    box-shadow:
+        6px 6px 12px #d6cfc9,
+        -6px -6px 12px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.neumorphic-card:hover {
+    box-shadow:
+        10px 10px 20px #d6cfc9,
+        -10px -10px 20px #ffffff;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(74, 55, 40, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Scroll Animations */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Typography Enhancements */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.02em;
+}
+
+p,
+li,
+a,
+.font-sans {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FAF3EE;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8B5E3C;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4A3728;
+}
+
+/* Mobile Responsiveness Overrides */
+@media (max-width: 640px) {
+
+    /* Hero Section Adjustments */
+    #about .max-w-7xl {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    #about img {
+        width: 260px !important;
+        height: 260px !important;
+        margin: 0 auto !important;
+    }
+
+    #about h1 {
+        font-size: 3rem !important;
+        line-height: 1.1 !important;
+    }
+
+    #about h2 {
+        font-size: 1.25rem !important;
+        /* Hello, I'm line */
+    }
+
+    #about h3 {
+        font-size: 1.5rem !important;
+        /* Law Student line */
+    }
+
+    #about .flex-col.sm\:flex-row {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    /* Experience & Activities Item Fixes */
+    .glass-card {
+        padding: 1.5rem !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .glass-card .flex-shrink-0 {
+        margin-bottom: 1rem !important;
+    }
+
+    .glass-card .whitespace-nowrap {
+        margin-top: 1rem !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* Section Spacing */
+    section {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+    }
+
+    h2 {
+        font-size: 2.25rem !important;
+        margin-bottom: 2.5rem !important;
+    }
+
+    /* Admin Tools Positioning */
+    #admin-tools {
+        left: 0.75rem !important;
+        bottom: 0.75rem !important;
+        transform: scale(0.85) !important;
+        transform-origin: bottom left;
+    }
+
+    #admin-login-modal>div {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Fix for horizontal scroll on some mobile browsers */
+html,
+body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
